@@ -1,35 +1,18 @@
 package ch.redhat.hackathon.rest;
+
 import ch.redhat.hackathon.domain.Person;
 import ch.redhat.hackathon.persistence.PersonRepository;
-import io.quarkus.hibernate.orm.panache.Panache;
 import io.quarkus.panache.common.Sort;
-import io.smallrye.mutiny.Uni;
 import org.jboss.logging.Logger;
-
-import static javax.ws.rs.core.Response.Status.CREATED;
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
-import static javax.ws.rs.core.Response.Status.NO_CONTENT;
-
-import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import java.util.List;
+
+import static javax.ws.rs.core.Response.Status.*;
 
 @Path("persons")
 @ApplicationScoped
