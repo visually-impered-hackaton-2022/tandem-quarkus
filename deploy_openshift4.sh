@@ -2,8 +2,8 @@
 
 echo "deploy app"
 echo
-oc new-app  https://github.com/visually-impered-hackaton-2022/demo-persons.git  \
- --context-dir=quarkus-backend \
+oc new-app  https://github.com/visually-impered-hackaton-2022/tandem-quarkus.git#develop  \
+ \
 -e POSTGRESQL_USER=niko \
 -e POSTGRESQL_PASSWORD=niko \
 -e POSTGRESQL_DATABASE=sampledb \

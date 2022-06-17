@@ -8,8 +8,8 @@ public class Person{
     @Id
     @GeneratedValue
     public Long id;
-        public String firstName;
-        public String lastName;
+        public String username;
+        public String password;
         public boolean blind;
         String[] interests;
 }
