@@ -31,7 +31,7 @@ public class EventResource {
     }
 
     @GET
-    @Path("{id}/person")
+    @Path("{id}/applied")
     public List<Person> getAppliedPersons(Long id) {
 
         if (id == null) {
