@@ -32,7 +32,7 @@ public class EventResource {
 
     @GET
     @Path("{id}/person")
-    public List<Person>  getPersons(Long id) {
+    public List<Person> getAppliedPersons(Long id) {
 
         if (id == null) {
             throw new WebApplicationException("Id is not provided");
@@ -45,7 +45,7 @@ public class EventResource {
 
         }
 
-        return event.persons;
+        return event.applied;
 
     }
 
