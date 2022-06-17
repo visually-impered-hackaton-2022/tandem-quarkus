@@ -26,11 +26,12 @@ public class PersonResource {
 
     @GET
     public List<Person> get() {
+        LOGGER.info("get all persons from database sorted by id");
         return personRepository.listAll(Sort.by("id"));
     }
 
     @GET
-    @Path("{id}/parisipant")
+    @Path("{id}/participants")
     public Person getSingle(Long id) {
         return personRepository.findById(id);
     }
