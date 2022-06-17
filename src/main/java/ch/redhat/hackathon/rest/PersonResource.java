@@ -30,7 +30,7 @@ public class PersonResource {
     }
 
     @GET
-    @Path("{id}")
+    @Path("{id}/parisipant")
     public Person getSingle(Long id) {
         return personRepository.findById(id);
     }
@@ -54,7 +54,7 @@ public class PersonResource {
             throw new WebApplicationException("Fruit name was not set on request.", 422);
         }
         Person entity = personRepository.find("id",id).firstResult();
-        if (entity !=null ){
+        if (entity ==null ){
             return Response.ok().status(NOT_FOUND).build();
         }
 
