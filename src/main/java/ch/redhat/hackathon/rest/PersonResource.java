@@ -26,7 +26,7 @@ public class PersonResource {
 
     @GET
     public List<Person> get() {
-        return personRepository.listAll(Sort.by("lastname"));
+        return personRepository.listAll(Sort.by("id"));
     }
 
     @GET
