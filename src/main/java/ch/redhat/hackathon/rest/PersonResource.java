@@ -31,10 +31,11 @@ public class PersonResource {
     }
 
     @GET
-    @Path("{id}/participants")
+    @Path("{id}")
     public Person getSingle(Long id) {
         return personRepository.findById(id);
     }
+
 
     @POST
     @Transactional
